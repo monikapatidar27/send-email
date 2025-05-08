@@ -94,7 +94,7 @@ const mailOptions = {
   try {
     
     await transporter().sendMail(mailOptions);
-    res.json({ message: "Your inquiry has been sent successfully. The property owner will contact you soon!" });
+    res.json({ message: "Your inquiry has been sent successfully. Owner will contact you shortly!" });
   } catch (err) {
     console.error(err);
     res.status(500).json({ message: "Failed to send email" });
