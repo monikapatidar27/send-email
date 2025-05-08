@@ -29,7 +29,7 @@ app.post("/send-email", async (req, res) => {
   if (!validateEmail(email)) {
     return res.status(400).json({ message: "Invalid email format" });
   }
-  if (!/^\d{10}$/.test(contact)) {
+  if (!/^\+?[0-9]{10,15}$/.test(contact)) {
     return res.status(400).json({ message: "Invalid contact number format" });
   }
 
