@@ -46,12 +46,11 @@ app.post("/send-email", async (req, res) => {
   const mailOptions = {
     from: process.env.MAIL_USER,
     to: email, 
-    subject: "New Inquiry from Prospective Tenant Regarding Your Property",
+    subject: "Prospective Tenant Reached Out – View Details Inside",
     text: `Dear Owner,
 
 You have received a new inquiry from a potential tenant.
-
-Details:
+Here are the Details:
 Name: ${name}
 Email: ${email}
 Contact Number: ${contact}
