@@ -16,6 +16,9 @@ const validateEmail = (email) => {
   return validator.isEmail(email);
 };
 
+app.get('/', (req, res) => {
+  res.send('Welcome to the server!');
+});
 app.post("/send-email", async (req, res) => {
   const { name, email, contact, message } = req.body;
 
